@@ -152,6 +152,7 @@ if __name__ == '__main__':
         root_directory = os.getcwd()
     if save_directory == ".":
         save_directory = os.getcwd()
+    print(root_dir)
     if not os.path.isdir(root_directory):
         raise ValueError("Root directory does not exist!")
     if not os.path.exists(save_directory):
