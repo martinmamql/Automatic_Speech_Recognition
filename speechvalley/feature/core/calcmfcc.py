@@ -206,7 +206,7 @@ def get_filter_banks(filters_num=20,NFFT=512,samplerate=16000,low_freq=0,high_fr
     bin=numpy.floor((NFFT+1)*hz_points/samplerate)
     # Build Mel filters' expression.First and third points of each filter are zeros.
     filters_num = int(filters_num)
-    fbank=numpy.zeros([filters_num,NFFT/2+1])
+    fbank=numpy.zeros([filters_num,NFFT//2+1])
     for j in xrange(0,filters_num):
         for i in xrange(int(bin[j]),int(bin[j+1])):
             fbank[j,i]=(i-bin[j])/(bin[j+1]-bin[j])
